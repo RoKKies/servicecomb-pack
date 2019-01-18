@@ -8,6 +8,7 @@
          <artifactId>mysql-connector-java</artifactId>
        </dependency>
    ```
+   **注意**: 如果您的JDBC驱动版本是6.0+以上的，需要在alpha\alpha-server\src\main\resources\application.yaml的url后面加上serverTimezone=UTC或GMT即可，如果指定使用gmt+8时区，需要写成GMT%2B8，否则可能报解析为空的错误。
 
 2. 安装Saga
    ```bash
